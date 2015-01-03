@@ -7,8 +7,9 @@
             <field name="arch" type="xml">
                    <xpath expr="//field[@name='complete_name']" position="before">
                       <field name="id"/>
+                   </xpath>
+                   <xpath expr="//field[@name='complete_name']" position="after">
                       <field name="parent_id"/>
-                      <field name="child_id"/>
                       <field name="sequence"/>
                    </xpath>
             </field>
