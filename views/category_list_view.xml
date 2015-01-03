@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <record id="sale_category_list_view_extended" model="ir.ui.view">
+        <record id="sale_public_product_category_list_view_extended" model="ir.ui.view">
             <field name="model">product.public.category</field>
             <field name="inherit_id" ref="website_sale.product_public_category_tree_view"/>
             <field name="arch" type="xml">
@@ -11,6 +11,21 @@
                    <xpath expr="//field[@name='complete_name']" position="after">
                       <field name="parent_id"/>
                       <field name="sequence"/>
+                   </xpath>
+            </field>
+        </record>
+        <record id="sale_product_category_list_view_extended" model="ir.ui.view">
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_list_view"/>
+            <field name="arch" type="xml">
+                   <xpath expr="//field[@name='complete_name']" position="before">
+                      <field name="id"/>
+                   </xpath>
+                   <xpath expr="//field[@name='complete_name']" position="after">
+                      <field name="parent_id"/>
+                      <field name="sequence"/>
+                      <field name="parent_left"/>
+                      <field name="parent_right"/>
                    </xpath>
             </field>
         </record>
