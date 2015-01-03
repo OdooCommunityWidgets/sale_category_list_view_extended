@@ -2,7 +2,7 @@
 <openerp>
     <data>
         <template id="sale_category_list_view_extended" inherit_id="website_sale.product_public_category_tree_view" name="Sale Product Category List View Extended">
-          <xpath expr="//view[@view_id='676']/tree[@string_id='Product Product Categories']/field[@name='complete_name']" position="after">
+          <xpath expr="//view/tree[@string_id='Product Product Categories']/field[@name='complete_name']" position="after">
             <field name="id"/>
           </xpath>
         </template>
