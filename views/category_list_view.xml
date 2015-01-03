@@ -5,8 +5,11 @@
             <field name="model">product.public.category</field>
             <field name="inherit_id" ref="website_sale.product_public_category_tree_view"/>
             <field name="arch" type="xml">
-                   <xpath expr="//field[@name='complete_name']" position="after">
+                   <xpath expr="//field[@name='complete_name']" position="before">
                       <field name="id"/>
+                      <field name="parent_id"/>
+                      <field name="child_id"/>
+                      <field name="sequence"/>
                    </xpath>
             </field>
         </record>
